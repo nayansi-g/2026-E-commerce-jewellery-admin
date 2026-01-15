@@ -10,7 +10,7 @@ export default function Login() {
   const handleSubmit = async(e)=>{
     e.preventDefault()
     try {
-      const res = await fetch("https://two026-e-commerce-jewellery-admin.onrender.com/user/login",{
+      const res = await fetch("https://two026-e-commerce-jewellery-backend.onrender.com/user/login",{
         method:"POST",
         headers:{
           "Content-Type":"application/json"

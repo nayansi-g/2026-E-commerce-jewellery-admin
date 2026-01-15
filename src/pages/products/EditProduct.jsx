@@ -13,7 +13,7 @@ const EditProduct =()=>{
 
     const fetchCategory = async()=>{
     try {
-        const res = await fetch("https://two026-e-commerce-jewellery-admin.onrender.com/category")
+        const res = await fetch("https://two026-e-commerce-jewellery-backend.onrender.com/category")
         const data = await res.json()
         console.log(data.getAllCategory)
         setCategories(data.getAllCategory)
@@ -24,7 +24,7 @@ const EditProduct =()=>{
 
 const fetchProduct = async()=>{
     try {
-        const res = await fetch(`https://two026-e-commerce-jewellery-admin.onrender.com/product/${id}`)
+        const res = await fetch(`https://two026-e-commerce-jewellery-backend.onrender.com/product/${id}`)
         const data = await res.json()
         console.log(data.getSingleProducts)
         setFormData(data.getSingleProducts)
@@ -65,7 +65,7 @@ const fetchUpdate = async(e)=>{
   });
 
           const token = localStorage.getItem("token");
-        const res = await fetch(`https://two026-e-commerce-jewellery-admin.onrender.com/product/update/${id}`,{
+        const res = await fetch(`https://two026-e-commerce-jewellery-backend.onrender.com/product/update/${id}`,{
             method:"PUT",
             headers:{
                 Authorization: `Bearer ${token}`,
@@ -165,7 +165,7 @@ const handleImageChange =()=>{
   />
     <div className="flex gap-3" >
         {formdata?.images?.map((img,index)=>{
-            let imgSrc = typeof img !== "string" ? URL.createObjectURL(img) : `https://two026-e-commerce-jewellery-admin.onrender.com/${img}`;
+            let imgSrc = typeof img !== "string" ? URL.createObjectURL(img) : `https://two026-e-commerce-jewellery-backend.onrender.com/${img}`;
         return <div className="relative flex gap-2">
            
             <span className="absolute right-0 w-3 -top-2"  onClick={()=>removeExistingImg(index)} ><CircleX className="text-white cursor-pointer bg-red-600 rounded-full " /></span>

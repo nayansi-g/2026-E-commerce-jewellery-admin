@@ -12,7 +12,7 @@ const AddCategory = () => {
 
    const token = localStorage.getItem("token");
 
-  const res = await fetch("https://two026-e-commerce-jewellery-admin.onrender.com/category/create", {
+  const res = await fetch("https://two026-e-commerce-jewellery-backend.onrender.com/category/create", {
         method: "POST",
         headers: {
             "Content-Type":"application/json",
