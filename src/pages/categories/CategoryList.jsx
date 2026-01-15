@@ -12,7 +12,7 @@ const CategoryList = () => {
       setLoading(true);
       const token = localStorage.getItem("token");
 
-      const res = await fetch("http://localhost:5000/category", {
+      const res = await fetch("https://two026-e-commerce-jewellery-admin.onrender.com/category", {
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -44,7 +44,7 @@ const CategoryList = () => {
       const token = localStorage.getItem("token");
 
       const res = await fetch(
-        `http://localhost:5000/category/delete/${id}`,
+        `https://two026-e-commerce-jewellery-admin.onrender.com/category/delete/${id}`,
         {
           method: "DELETE",
           headers: {

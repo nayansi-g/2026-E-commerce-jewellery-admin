@@ -12,7 +12,7 @@ const ProductList = () => {
       setLoading(true);
       const token = localStorage.getItem("token");
 
-      const res = await fetch("http://localhost:5000/product", {
+      const res = await fetch("https://two026-e-commerce-jewellery-admin.onrender.com/product", {
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -44,7 +44,7 @@ const ProductList = () => {
       const token = localStorage.getItem("token");
 
       const res = await fetch(
-        `http://localhost:5000/product/delete/${id}`,
+        `https://two026-e-commerce-jewellery-admin.onrender.com/product/delete/${id}`,
         {
           method: "DELETE",
           headers: {
@@ -124,7 +124,7 @@ const ProductList = () => {
                   <td className="px-4 py-3">
                     {product.images?.length > 0 ? (
                       <img
-                        src={`http://localhost:5000/${product.images[0]}`}
+                        src={`https://two026-e-commerce-jewellery-admin.onrender.com/${product.images[0]}`}
                         alt={product.name}
                         className="w-12 h-12 object-cover rounded"
                       />

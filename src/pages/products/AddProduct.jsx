@@ -20,7 +20,7 @@ const AddProduct = () => {
 
   const fetchCategories = async ()=>{
     try{
-        let res = await fetch("http://localhost:5000/category");
+        let res = await fetch("https://two026-e-commerce-jewellery-admin.onrender.com/category");
         let data = await res.json();
         setCategories(data.getAllCategory)
     }catch(err){
@@ -54,7 +54,7 @@ const AddProduct = () => {
 
    const token = localStorage.getItem("token");
 
-  const res = await fetch("http://localhost:5000/product/admin/create", {
+  const res = await fetch("https://two026-e-commerce-jewellery-admin.onrender.com/product/admin/create", {
         method: "POST",
         headers: {
           Authorization: `Bearer ${token}`,

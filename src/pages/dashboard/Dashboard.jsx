@@ -23,10 +23,10 @@ const Dashboard = () => {
     const fetchDashboardData = async () => {
       try {
         const [pRes, cRes, oRes, uRes] = await Promise.all([
-          fetch("http://localhost:5000/product", { headers: { Authorization: `Bearer ${token}` } }),
-          fetch("http://localhost:5000/category", { headers: { Authorization: `Bearer ${token}` } }),
-          fetch("http://localhost:5000/order", { headers: { Authorization: `Bearer ${token}` } }),
-          fetch("http://localhost:5000/user", { headers: { Authorization: `Bearer ${token}` } }),
+          fetch("https://two026-e-commerce-jewellery-admin.onrender.com/product", { headers: { Authorization: `Bearer ${token}` } }),
+          fetch("https://two026-e-commerce-jewellery-admin.onrender.com/category", { headers: { Authorization: `Bearer ${token}` } }),
+          fetch("https://two026-e-commerce-jewellery-admin.onrender.com/order", { headers: { Authorization: `Bearer ${token}` } }),
+          fetch("https://two026-e-commerce-jewellery-admin.onrender.com/user", { headers: { Authorization: `Bearer ${token}` } }),
         ]);
 
         const products = await pRes.json();
