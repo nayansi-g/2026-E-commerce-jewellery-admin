@@ -70,6 +70,7 @@ const AddProduct = () => {
         return;
       }
       alert("✅ Product added successfully");
+      navigate("/admin/products")
      setFormData({
     name: "",
     description: "",
